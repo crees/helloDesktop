@@ -1,0 +1,116 @@
+bin/app
+bin/askpass
+bin/desktop2app
+bin/eject-and-clean
+bin/enable_tapping
+bin/getlalo
+bin/makeimg
+bin/man
+bin/rcorder
+bin/runappimage
+bin/screencast
+bin/start-hello
+bin/tpquirk
+bin/zfs-export-altroot
+bin/zfs-import-altroot
+@postunexec [ ! -f %D/etc/chrome/policies/managed/privacy.json.original ] || mv %D/etc/chrome/policies/managed/privacy.json.original %D/etc/chrome/policies/managed/privacy.json
+etc/chrome/policies/managed/privacy.json.hello
+@postexec [ ! -f %B/privacy.json ] || mv %B/privacy.json %B/privacy.json.original && cp %B/%f %B/privacy.json
+etc/devd/ethernet_tethering.conf
+@postunexec [ ! -f %D/etc/gtk-3.0/settings.ini.original ] || mv %D/etc/gtk-3.0/settings.ini.original %D/etc/gtk-3.0/settings.ini
+etc/gtk-3.0/settings.ini.hello
+@postexec [ ! -f %B/settings.ini ] || mv %B/settings.ini %B/settings.ini.original && cp %B/%f %B/settings.ini
+etc/pkg/repos/helloDesktop.conf
+etc/rc.d/alpine
+@postunexec [ ! -f %D/etc/slim.conf.original ] || mv %D/etc/slim.conf.original %D/etc/slim.conf
+etc/slim.conf.hello
+@postexec [ ! -f %B/slim.conf ] || mv %B/slim.conf %B/slim.conf.original && cp %B/%f %B/slim.conf
+etc/ssl/certs/jsm222.cert
+etc/sudoers.d/eject-sudoers
+etc/sudoers.d/shutdown-sudoers
+etc/xdg/Xmodmap
+etc/xdg/Xmodmap.apple
+etc/xdg/dunst/dunstrc
+etc/xdg/picom.conf
+libexec/app-placeholder
+libexec/lock-hellosystem-essential-packages
+sbin/diskutil
+share/applications/lector.desktop
+share/applications/runappimage.desktop
+share/chromium/extensions/cjpalhdlnbpafiamejdnhcphjbkeiagm.json
+share/chromium/extensions/fihnjjcciajhdojfnbdddfaoknhalnja.json
+share/dbus-1/services/org.freedesktop.FileManager1.service
+share/file-manager/actions/compress.desktop
+share/file-manager/actions/edit.desktop
+share/file-manager/actions/eject.desktop
+share/file-manager/actions/extract.desktop
+share/file-manager/actions/formatdisk.desktop
+share/file-manager/actions/git-cola.desktop
+share/file-manager/actions/menu-compress.desktop
+share/file-manager/actions/open-as-root.desktop
+share/file-manager/actions/writemedia.desktop
+share/iridium/extensions/cjpalhdlnbpafiamejdnhcphjbkeiagm.json
+share/iridium/extensions/fihnjjcciajhdojfnbdddfaoknhalnja.json
+share/thumbnailers/bundle.thumbnailer
+share/thumbnailers/ffmpeg.thumbnailer
+share/xsessions/hello.desktop
+@cwd /
+etc/rc.d/live
+etc/rc.d/load_acpi
+usr/share/skel/Desktop/trash-can.desktop
+usr/share/skel/dot.Xresources
+usr/share/skel/dot.Xresources-2x
+usr/share/skel/dot.config/BuildNotify/BuildNotify.conf
+usr/share/skel/dot.config/Lector/Lector.conf
+usr/share/skel/dot.config/Quotient/quaternion.conf
+usr/share/skel/dot.config/baloofilerc
+usr/share/skel/dot.config/chromium/Default/Preferences
+usr/share/skel/dot.config/cyberos/dock_pinned.conf
+usr/share/skel/dot.config/falkon/profiles/default/bookmarks.json
+usr/share/skel/dot.config/falkon/profiles/default/browsedata.db
+usr/share/skel/dot.config/falkon/profiles/default/settings.ini
+usr/share/skel/dot.config/featherpad/fp.conf
+usr/share/skel/dot.config/filer/default/settings.conf
+usr/share/skel/dot.config/fontconfig/fonts.conf
+usr/share/skel/dot.config/gtk-3.0/settings.ini
+usr/share/skel/dot.config/iridium/Default/Preferences
+usr/share/skel/dot.config/kdeglobals
+usr/share/skel/dot.config/kglobalshortcutsrc
+usr/share/skel/dot.config/lximage-qt/settings.conf
+usr/share/skel/dot.config/lxqt/globalkeyshortcuts.conf
+usr/share/skel/dot.config/qterminal.org/qterminal.ini
+usr/share/skel/dot.config/qtpad/notes/hello.txt
+usr/share/skel/dot.config/qtpad/preferences.json
+usr/share/skel/dot.gtk-bookmarks
+usr/share/skel/dot.gtkrc-2.0
+usr/share/skel/dot.hidden
+usr/share/skel/dot.openbox
+usr/share/skel/dot.openbox-2x
+usr/share/skel/dot.zshrc
+@dir Applications
+@dir System
+@dir usr/share/skel/Desktop
+@dir usr/share/skel/Documents
+@dir usr/share/skel/Downloads
+@dir usr/share/skel/dot.config/BuildNotify
+@dir usr/share/skel/dot.config/Lector
+@dir usr/share/skel/dot.config/Quotient
+@dir usr/share/skel/dot.config/chromium/Default
+@dir usr/share/skel/dot.config/chromium
+@dir usr/share/skel/dot.config/cyberos
+@dir usr/share/skel/dot.config/falkon/profiles/default
+@dir usr/share/skel/dot.config/falkon/profiles
+@dir usr/share/skel/dot.config/falkon
+@dir usr/share/skel/dot.config/featherpad
+@dir usr/share/skel/dot.config/filer/default
+@dir usr/share/skel/dot.config/filer
+@dir usr/share/skel/dot.config/fontconfig
+@dir usr/share/skel/dot.config/gtk-3.0
+@dir usr/share/skel/dot.config/iridium/Default
+@dir usr/share/skel/dot.config/iridium
+@dir usr/share/skel/dot.config/lximage-qt
+@dir usr/share/skel/dot.config/lxqt
+@dir usr/share/skel/dot.config/qterminal.org
+@dir usr/share/skel/dot.config/qtpad/notes
+@dir usr/share/skel/dot.config/qtpad
+@dir usr/share/skel/dot.config
