@@ -57,6 +57,9 @@ make -C x11/slim FLAVOR=lite package
 # helloDesktop meta port
 build_package x11-wm/hellodesktop
 
+# helloSystem special system files port
+build_package sysutils/helloSystem
+
 cd "${HERE}"
 umount /usr/ports
 
