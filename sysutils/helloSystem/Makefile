@@ -2,6 +2,9 @@ PORTNAME=	helloSystem
 PORTVERSION=	0.8.1
 DISTVERSIONPREFIX=	r
 CATEGORIES=	sysutils
+MASTER_SITES=	https://github.com/helloSystem/ISO/releases/download/assets/:asset
+DISTFILES=	graphite.jpg:asset graphite_shadow.jpg:asset
+DIST_SUBDIR=	helloSystem
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Supporting components for Hello System
@@ -12,6 +15,7 @@ USES=		desktop-file-utils
 USE_GITHUB=	yes
 GH_ACCOUNT=	helloSystem
 GH_PROJECT=	ISO
+EXTRACT_ONLY=	${DISTFILES:N*\:asset}
 NO_BUILD=	yes
 WRKSRC_SUBDIR=	overlays/uzip
 OVERLAYS=	hello localize openbox-theme mountarchive automount \
@@ -39,6 +43,12 @@ do-install:
 		${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX} && \
 		${FIND} . -type f | ${SED} 's,^\.,${PREFIX},' >> ${TMPPLIST}); \
 	    fi
+.endfor
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/slim/themes/default/
+.for f in ${DISTFILES:M*\:asset}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f:S,:asset,,} \
+		${STAGEDIR}${PREFIX}/share/slim/themes/default/
+	${ECHO_CMD} ${PREFIX}/share/slim/themes/default/${f:S,:asset,,} >> ${TMPPLIST}
 .endfor
 	<${TMPPLIST} (while read f; do \
 	    orig="$${f%.hellopkg}"; \

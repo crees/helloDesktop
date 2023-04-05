@@ -1,3 +1,7 @@
-TIMESTAMP = 1679929614
-SHA256 (helloSystem-ISO-r0.8.1_GH0.tar.gz) = a388e20411c747db339ffeae747b20bfe3b13efac3415e50b7788ef91c5a14b3
-SIZE (helloSystem-ISO-r0.8.1_GH0.tar.gz) = 151744
+TIMESTAMP = 1680708431
+SHA256 (helloSystem/graphite.jpg) = e8665261038b392aca1265738a050311b9666ddf29f5b9b939ca9a527c272da0
+SIZE (helloSystem/graphite.jpg) = 88745
+SHA256 (helloSystem/graphite_shadow.jpg) = 1caaf7bb344081c0c20541564a798df17753a812e7c0ed15f336d652c91a6a51
+SIZE (helloSystem/graphite_shadow.jpg) = 93204
+SHA256 (helloSystem/helloSystem-ISO-r0.8.1_GH0.tar.gz) = a388e20411c747db339ffeae747b20bfe3b13efac3415e50b7788ef91c5a14b3
+SIZE (helloSystem/helloSystem-ISO-r0.8.1_GH0.tar.gz) = 151744
